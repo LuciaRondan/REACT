@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='container'>
        <NavBar></NavBar>
-       <ItemListcontainer greeting={'Saludos'}></ItemListcontainer>
+       <ItemListcontainer></ItemListcontainer>
        <p>Contador:{counter}</p>
        <button onClick= {handleClickSuma} className= 'btn'> + </button>
        <button onClick= {handleClickResta} className= 'btn'> - </button>
