@@ -5,12 +5,12 @@ const ItemList = ({items}) => {
      return (
         <div>
             {
-            // console.log(items)
-            // items.length ? (
-            //     items.map( (item) => <Item key={item.id} {...item}/>)
-            // ) : (
-            //       <h2> Cargando...</h2>
-            /*)*/}
+                items.length ? (
+                items.map ( (item) => <Item key={item.id} {...item}/>)
+                ) : (
+                <h2> Cargando...</h2>
+                )
+            }   
         </div>
      )
 }

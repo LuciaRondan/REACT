@@ -5,7 +5,7 @@ const Item = ({title, img, price}) => {
        <article>
          <h3>{title}</h3>
          <h3>{price}</h3>
-         <h3>{img}</h3>
+         <img src={img} style={{with: "5rem"}}></img>
        </article>
     )
 }

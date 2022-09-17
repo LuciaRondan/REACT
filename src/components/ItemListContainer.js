@@ -4,11 +4,10 @@ import ItemList from "./ItemList";
 
 
 const ItemListcontainer = () => {
-   const {items, setItems} = useState([]);
+   const [items, setItems] = useState([]);
 
    const getItems = (data, time) =>
       new Promise((resolve, reject) => {
-         console.log([data])
          setTimeout(() => {
             if(data) {
                resolve(data);
