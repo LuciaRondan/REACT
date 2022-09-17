@@ -3,23 +3,22 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListcontainer from './components/ItemListContainer';
+import Contador from './components/Contador';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemsDetail from './components/ItemsDetail';
 
 function App() {
-  const [counter, setCounter] = useState(0) 
-  const handleClickSuma =() => {
-  setCounter (counter + 1);
-  }
-  const handleClickResta = () =>{
-    setCounter (counter - 1)
-  }
-
+  
   return (
     <div className='container'>
-       <NavBar></NavBar>
-       <ItemListcontainer></ItemListcontainer>
-       <p>Contador:{counter}</p>
-       <button onClick= {handleClickSuma} className= 'btn'> + </button>
-       <button onClick= {handleClickResta} className= 'btn'> - </button>
+      <BrowserRouter>
+        <NavBar></NavBar>
+        <Routes>
+          <Route path='/' element = {<ItemListcontainer></ItemListcontainer>} />
+          <Route path='/:id' element = {<ItemsDetail></ItemsDetail>} />
+          <Route path='/contador' element = {<Contador></Contador>} />
+        </Routes>
+       </BrowserRouter>
     </div>
     
   );
